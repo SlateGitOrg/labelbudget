@@ -6,7 +6,7 @@ An active-learning benchmark that reports labels-to-target-accuracy with varianc
 
 ## Why
 
-Expert labelling is expensive: a clinician reviewing clinical notes can cost 90 an hour. Teams often label thousands of examples because that felt safe, without measuring how few well-chosen ones would have reached the same accuracy. Active-learning papers make this worse by showing a single accuracy-versus-labels curve, and single runs are notoriously seed-sensitive: one seed can show a 2x advantage that vanishes on replication. labelbudget runs every strategy over many seeds, keeps the random-sampling baseline front and centre, and refuses to declare a winner when the evidence does not support one.
+Expert labelling is expensive: a clinician reviewing clinical notes can cost $90 an hour. Teams often label thousands of examples because that felt safe, without measuring how few well-chosen ones would have reached the same accuracy. Active-learning papers make this worse by showing a single accuracy-versus-labels curve, and single runs are notoriously seed-sensitive: one seed can show a 2x advantage that vanishes on replication. labelbudget runs every strategy over many seeds, keeps the random-sampling baseline front and centre, and refuses to declare a winner when the evidence does not support one.
 
 ## Features
 
@@ -65,10 +65,10 @@ python -m src.demo                        # 30-seed benchmark, guard and budget 
   uncertainty vs random: indistinguishable at 30 seeds (mean diff -5.9 labels, 95% CI [-24.3, +12.8], sign p=1.000)
   coreset vs random: indistinguishable at 30 seeds (mean diff -14.7 labels, 95% CI [-28.5, +1.3], sign p=0.108)
 
-[6] Label budget that reached target on 90% of seeds, at 90/hour, 6 min/label
-  random        118 labels =     1062  (censored 2)
-  uncertainty   134 labels =     1206  (censored 1)
-  coreset       115 labels =     1035  (censored 3)
+[6] Label budget that reached target on 90% of seeds, at $90/hour, 6 min/label
+  random        118 labels = $   1062  (censored 2)
+  uncertainty   134 labels = $   1206  (censored 1)
+  coreset       115 labels = $   1035  (censored 3)
 ```
 
 ## How it works

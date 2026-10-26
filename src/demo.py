@@ -81,14 +81,14 @@ def main():
         print(line)
 
     # 6. Budget.
-    print("[6] Label budget that reached target on 90% of seeds, at 90/hour, 6 min/label")
+    print("[6] Label budget that reached target on 90% of seeds, at $90/hour, 6 min/label")
     for name in NAMES:
         labels, cens = budget_recommendation(res[name])
         if labels is None:
             print("  %-12s target missed within budget on %d/%d seeds -> buy more than %d labels"
                   % (name, cens, N_SEEDS, cfg.budget))
         else:
-            print("  %-12s %4d labels = %8.0f  (censored %d)" % (name, labels, cost(labels), cens))
+            print("  %-12s %4d labels = $%7.0f  (censored %d)" % (name, labels, cost(labels), cens))
     print()
     print("runtime %.1fs" % elapsed)
 

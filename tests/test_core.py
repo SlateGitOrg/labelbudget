@@ -158,7 +158,7 @@ class TestStats(unittest.TestCase):
 
 
 class TestGuard(unittest.TestCase):
-    """The differentiator: no winner is declared from seed noise."""
+    """The guard must not declare a winner from seed noise."""
 
     NOISE_SD = 50.0  # close to the measured sd of paired diffs (42-53 labels)
 
